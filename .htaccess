@@ -1,0 +1,80 @@
+#Bat che do rewrite url
+RewriteEngine On
+
+#rewrite url: /trang-chu
+RewriteRule ^trang-chu$ index.php?controller=index.php
+
+#rewrite url: /san-pham
+RewriteRule ^san-pham$ index.php?controller=products
+
+#rewrite url: /thoi-trang-cong-so
+RewriteRule ^thoi-trang-cong-so/(.*)$ index.php?controller=product_type&id=1&id1=$1
+
+#rewrite url: /thoi-trang-dao-pho
+RewriteRule ^thoi-trang-dao-pho/(.*)$ index.php?controller=product_type&id=2&id1=$1
+
+#rewrite url: /thoi-trang-da-tiec
+RewriteRule ^thoi-trang-da-tiec/(.*)$ index.php?controller=product_type&id=3&id1=$1
+
+#rewrite url: /thoi-trang-cong-so/(.*)
+RewriteRule ^cong-so/(.*)/(.*)$ index.php?controller=product_category&id=$1&id1=1&id2=$2
+
+#rewrite url: /thoi-trang-dao-pho/(.*)
+RewriteRule ^dao-pho/(.*)/(.*)$ index.php?controller=product_category&id=$1&id1=2&id2=$2
+
+#rewrite url: /thoi-trang-da-tiec/(.*)
+RewriteRule ^da-tiec/(.*)/(.*)$ index.php?controller=product_category&id=$1&id1=3&id2=$2
+
+#rewrite url: /san-pham-giam-gia
+RewriteRule ^san-pham-giam-gia$ index.php?controller=product_sale
+
+#rewrite url: /bo-suu-tap
+RewriteRule ^bo-suu-tap$ index.php?controller=collect
+
+#rewrite url: /san-pham-ban-chay
+RewriteRule ^san-pham-ban-chay$ index.php?controller=product_hot
+
+#rewrite url: /hang-moi-ve
+RewriteRule ^hang-moi-ve$ index.php?controller=product_new
+
+#rewrite url: /tin-tuc
+RewriteRule ^tin-tuc$ index.php?controller=news
+
+#rewrite url: /lien-he
+RewriteRule ^lien-he$ index.php?controller=contact
+
+#rewrite url: /lien-he
+RewriteRule ^lien-he$ index.php?controller=contact
+
+#rewrite url: /gio-hang
+RewriteRule ^gio-hang$ index.php?controller=cart
+
+#rewrite url: /thanh-toan
+RewriteRule ^thanh-toan$ index.php?controller=checkout
+
+#rewrite url: /gia-0-500000
+RewriteRule ^gia-0-500000$ index.php?controller=filter&min=0&max=500000
+
+#rewrite url: /gia-500000-1000000
+RewriteRule ^gia-500000-1000000$ index.php?controller=filter&min=500000&max=1000000
+
+#rewrite url: /gia-1000000-2000000
+RewriteRule ^gia-1000000-2000000$ index.php?controller=filter&min=1000000&max=2000000
+
+#rewrite url: /gia-2000000-5000000
+RewriteRule ^gia-2000000-5000000$ index.php?controller=filter&min=2000000&max=5000000
+
+#rewrite url: /gia-5000000-7000000
+RewriteRule ^gia-5000000-7000000$ index.php?controller=filter&min=5000000&max=7000000
+
+#rewrite url: /gia-tren-7000000
+RewriteRule ^gia-tren-7000000$ index.php?controller=filter&min=7000000&max=100000000000
+
+#rewrite url: http://localhost/php31_fashion2/index.php?controller=product_detail&id=$1
+RewriteRule ^san-pham/chi-tiet/(.*)$ index.php?controller=product_detail&id=$1
+
+#rewrite url: http://localhost/php31_fashion2/index.php?controller=news_detail&id=$1
+RewriteRule ^tin-tuc/chi-tiet/(.*)$ index.php?controller=news_detail&id=$1
+
+#rewrite url: http://localhost/php31_fashion2/index.php?controller=product_hot&id=0&p=1
+RewriteRule ^san-pham-ban-chay-trang-1/(.*)$ index.php?controller=news_detail&id=$1
